@@ -1,5 +1,5 @@
 close all
-clear all
+clear
 
 %% Elección de conjunto de entrada
 % load('Regresion/D_Airfoil.mat');Neu=[5  1]; 
@@ -106,4 +106,5 @@ ylabel('ECM')
 hold on
 %% --> Pintar el MSE del conjunto de test <--
 %% ->> Completar aquí <<-
-
+plot(MSEAcumuladoTest_vector, 'r')
+hold on

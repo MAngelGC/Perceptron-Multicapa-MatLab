@@ -13,7 +13,15 @@ difT=zeros(nOcultas,size(patron,2));
 %% --> Cálculo de deltas2 y difW <--
 %% ->> Completar aquí <<-
 
+err = (Z - y);
+g1d = derivadaLogistica(h, Beta);
+g2d = derivadaLogistica(u, Beta);
+delta2 = err * g1d;
+difW = eta * delta2 * s;
 %% --> Cálculo de deltas1 y difT <--
 %% ->> Completar aquí <<-
+
+delta1 = g2d' .* delta2 .* w';
+difT = eta * delta1 * patron;
 end
 
