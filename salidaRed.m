@@ -3,10 +3,9 @@ function [y, h, s, u] = salidaRed(patron, t, w, Beta)
 
 %% ->> Completar aquí <<-
 
-u = patron * t;
+u = patron * t';
 s = logistica(u, Beta);
 h = s * w';
-%% ...
 y=logistica(h,Beta);            %cálculo de salida de la red, capa de salida
 
 
